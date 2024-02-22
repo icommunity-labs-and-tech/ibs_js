@@ -1,6 +1,6 @@
 {
   "name": "ibs_js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The IBS SDK for browsers",
   "main": "./dist/index.js",
   "scripts": {
