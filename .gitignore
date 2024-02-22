@@ -1,6 +1,3 @@
-# bundle ci
-public
-
 # npm account
 .npmrc
 
