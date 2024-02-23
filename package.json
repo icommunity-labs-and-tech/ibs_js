@@ -9,7 +9,7 @@
     "watch": "tsc -w -p .",
     "clean": "rm -rf dist",
     "build-package": "tsc",
-    "build-bundle": "browserify dist/index.js --standalone ibsjs | uglifyjs > public/ibs.js",
+    "build-bundle": "browserify dist/index.js --standalone ibsjs | uglifyjs > public/bundle.js",
     "build": "npm run build-package && mkdir -p public && npm run build-bundle",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "start": "node --loader ts-node/esm ./src/index.ts",
@@ -24,7 +24,8 @@
   "license": "Apache-2.0",
   "files": [
     "./dist/*",
-    "./dist/client/*"
+    "./dist/client/*",
+    "./public/bundle.js"
   ],
   "typings": "./dist/index.d.ts",
   "devDependencies": {
