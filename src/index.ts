@@ -1,8 +1,7 @@
 
 
 import { Fingerprint, NewFingerprint } from "./fingerptint";
-import { IbsClient } from "./ibs";
-import { EvidenceRequest } from "./client/evidence";
+import { EvidenceRequest, IbsClient } from "./ibs";
 
 module.exports = {
     IbsClient,

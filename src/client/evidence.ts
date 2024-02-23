@@ -25,17 +25,20 @@ export class EvidenceRequest {
 
 class Payload {
     readonly title: string;
-    readonly files: IntegrityBody[];
+    readonly files: string;
 
     constructor(title: string, integrity: {name: string, checksum: string}[]) {
         this.title = title;
-        this.files = integrity.map(i => new IntegrityBody(i.name, i.checksum));
+        this.files = JSON.stringify(integrity.map(i => new IntegrityBody(i.name, i.checksum)));
     }
 }
 
 class IntegrityBody {
     readonly name: string;
     readonly checksum: string;
+    readonly type: string      = "file";
+    readonly algorithm: string = "SHA-512";
+    readonly sanitizer: string = "base64.standard";
 
     constructor(name: string, checksum: string) {
         this.name = name;

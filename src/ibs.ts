@@ -19,14 +19,14 @@ export class IbsClient {
 
             const content = await Promise.all(payload);
 
-            return await this.client.attach(client_secret, req.title, req.signatures, content);
+            return await this.client.newEvidence(client_secret, req.title, req.signatures, content);
         } else { // is a fingerprints list
-            return await this.client.attach(client_secret, req.title, req.signatures, req.files as (Fingerprint[]));
+            return await this.client.newEvidence(client_secret, req.title, req.signatures, req.files as (Fingerprint[]));
         }
     }
 }
 
-class EvidenceRequest {
+export class EvidenceRequest {
     readonly title: string;
     readonly signatures: string[];
     readonly files: (File | Fingerprint)[];
