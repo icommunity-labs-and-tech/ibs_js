@@ -22,13 +22,13 @@ You need to get a node.js environment to use this library. Get the latest versio
 
 2. Install the repository from the npm registry:
 ```sh
-npm install ibs.js
+npm install ibs_js
 ```
 
 Or if you are using HTML and JavaScript:
 
 ```html
-<script src="https://cdn.icommunitylabs.com/client_bundle"></script>
+<script src="https://cdn.icommunitylabs.com/client_bundle?v=v0.1.2"></script>
 ```
 
 3. Set your access_token as an environment variable.
@@ -42,7 +42,7 @@ You could also set this in your .env file or whatever your frontend library uses
 ## Usage
 
 ```js
-import { IbsClient } from "ibs.js";
+import { IbsClient } from "bundle.js";
 import config from "dotenv";
 
 const access_token = config.env.IBS_PUBLIC_TOKEN;
