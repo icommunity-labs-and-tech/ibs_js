@@ -25,11 +25,11 @@ export class EvidenceRequest {
 
 class Payload {
     readonly title: string;
-    readonly content: string;
+    readonly content: IntegrityBody[];
 
     constructor(title: string, integrity: {name: string, checksum: string}[]) {
         this.title = title;
-        this.content = JSON.stringify(integrity.map(i => new IntegrityBody(i.name, i.checksum)));
+        this.content = integrity.map(i => new IntegrityBody(i.name, i.checksum));
     }
 }
 
